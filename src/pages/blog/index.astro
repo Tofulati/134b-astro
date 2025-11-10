@@ -1,0 +1,20 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import BlogCard from "../../components/BlogCard.astro";
+import { getCollection } from "astro:content";
+
+const posts = await getCollection("posts");
+---
+<BaseLayout title="Blog">
+  <h1>All Blog Posts</h1>
+  <blog-list>
+    {posts.map(({ data, slug }) => (
+      <BlogCard
+        title={data.title}
+        description={data.description}
+        pubDate={data.pubDate}
+        url={`/blog/${slug}/`}
+      />
+    ))}
+  </blog-list>
+</BaseLayout>

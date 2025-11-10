@@ -1,12 +1,27 @@
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
-	</head>
-	<body>
-		<h1>Astro</h1>
-	</body>
-</html>
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+---
+<BaseLayout title="Home">
+  <section>
+    <h1>Welcome to My Astro Blog</h1>
+    <p>
+      This blog is my exploration into the world of modern web development — built entirely with 
+      <strong>Astro</strong>, a powerful static site generator designed for speed and simplicity. 
+      Here, I’ll document what I learn about performance, accessibility, and web design, while 
+      experimenting with how Astro renders content with <em>minimal JavaScript</em>.
+    </p>
+
+    <p>
+      Expect tutorials, reflections, and occasional deep dives into how static site generators compare 
+      with traditional front-end frameworks. My goal is to create something fast, lightweight, and easy to maintain — 
+      a space that feels like both a project log and a learning journey.
+    </p>
+
+    <p>
+      Whether you’re a student, a developer, or someone just curious about new web tools, 
+      I hope you find something useful or inspiring here. Feel free to start by exploring my latest posts!
+    </p>
+
+    <a href="/blog">Read My Posts</a>
+  </section>
+</BaseLayout>
