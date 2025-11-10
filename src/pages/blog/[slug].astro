@@ -1,31 +1,35 @@
 ---
 import BaseLayout from "../../layouts/BaseLayout.astro";
+import Tag from "../../components/Tag.astro";
 import { getCollection } from "astro:content";
-
 export async function getStaticPaths() {
   const posts = await getCollection("posts");
-
   return posts.map((post) => ({
     params: { slug: post.slug },
     props: { post },
   }));
 }
-
 const { post } = Astro.props;
 const { data, body } = post;
 ---
-
 <BaseLayout title={data.title}>
   <article>
     <h1>{data.title}</h1>
     <p><small>
         {new Date(data.pubDate).toLocaleDateString(undefined, {
-            year: "numeric",
-            month: "long",
-            day: "numeric",
-            timeZone: "UTC"
-        })}
+      year: "numeric",
+      month: "long",
+      day: "numeric",
+      timeZone: "UTC"
+    })}
     </small></p>
-    <div set:html={post.body} />
+    
+    {data.tags && data.tags.length > 0 && (
+      <nav class="tags">
+        {data.tags.map(tag => <Tag tag={tag} />)}
+      </nav>
+    )}
+    
+    <section set:html={post.body} />
   </article>
 </BaseLayout>

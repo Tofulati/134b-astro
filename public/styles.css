@@ -60,6 +60,28 @@ body {
         justify-content: center; 
         align-items: center;
 
+        .tags {
+            display: flex;
+            gap: 0.5rem;
+            flex-wrap: wrap;
+            justify-content: center;
+
+            .tag {
+                background-color: var(--secondary);
+                padding: 0.25rem 0.75rem;
+                border-radius: 0.25rem;
+                text-decoration: none;
+                color: var(--text);
+                font-size: 0.875rem;
+                transition: background-color 0.3s ease;
+
+                &:hover {
+                    background-color: var(--accent);
+                    color: var(--background);
+                }
+            }
+        }
+
         section {
             display: flex;
             flex-direction: column;
@@ -75,7 +97,7 @@ body {
             box-shadow: 0 0.25rem 0.625rem rgba(0, 0, 0, 0.05);
             transition: transform 0.3s ease, box-shadow 0.3s ease;
             width: 100%;
-            max-width: 42rem;
+            max-width: 50rem;
 
             &:hover {
                 transform: translateY(-0.3125rem);

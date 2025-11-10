@@ -2,6 +2,7 @@
 title: "Lorem ipsum dolor sit amet"
 description: "Lorem ipsum dolor sit amet"
 pubDate: 2025-11-10
+tags: ["web development", "stuff"]
 ---
 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla facilisi. Suspendisse vitae congue lectus. Donec dignissim, orci nec porttitor sagittis, nulla sem commodo tortor, sed placerat est justo in mauris. Duis et sapien a sapien suscipit vulputate. Nam feugiat orci non odio tincidunt, nec efficitur justo tempus. Aenean malesuada erat vel commodo blandit. Fusce sed magna nec magna aliquet ultrices.
