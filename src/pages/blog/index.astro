@@ -8,13 +8,7 @@ const posts = await getCollection("posts");
 <BaseLayout title="Blog">
   <h1>All Blog Posts</h1>
   <blog-list>
-    {posts.map(({ data, slug }) => (
-      <BlogCard
-        title={data.title}
-        description={data.description}
-        pubDate={data.pubDate}
-        url={`/blog/${slug}/`}
-      />
-    ))}
+    {posts.map(post => <BlogCard {...post.data} url={`/blog/${post.slug}/`} />)}
   </blog-list>
 </BaseLayout>
+

@@ -1,0 +1,8 @@
+---
+const { name, bio, avatarUrl } = Astro.props;
+---
+<div class="author-card">
+  <img src={avatarUrl} alt={name} />
+  <h4>{name}</h4>
+  <p>{bio}</p>
+</div>
